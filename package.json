@@ -2,6 +2,7 @@
   "jspm": {
     "directories": {},
     "dependencies": {
+      "fetch": "github:github/fetch@^0.9.0",
       "react": "npm:react@^0.13.3"
     },
     "devDependencies": {
