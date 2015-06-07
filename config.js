@@ -2,6 +2,7 @@ System.config({
   "baseURL": "/",
   "transpiler": "traceur",
   "paths": {
+    "widget/*": "app/widget/*",
     "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js"
