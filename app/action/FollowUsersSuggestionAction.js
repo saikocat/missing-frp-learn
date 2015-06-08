@@ -11,16 +11,5 @@ export default {
       emitter.end();
     });
     AppDispatcher.plug(stream);
-  },
-
-  removeSuggestion: function(id) {
-    let stream = Kefir.stream(emitter => {
-      emitter.emit({
-        actionType: FollowUsersSuggestionConstant.FOLLOWUSERSSUGGESTION_REMOVE_SUGGESTION,
-        id: id
-      });
-      emitter.end();
-    });
-    AppDispatcher.plug(stream);
   }
 };
