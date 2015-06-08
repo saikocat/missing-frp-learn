@@ -1,4 +1,5 @@
 import React from 'react';
+import Error from 'widget/Error.jsx!';
 import FollowUsersSuggestion from 'widget/FollowUsersSuggestion.jsx!';
 import FollowUsersSuggestionStore from 'app/store/FollowUsersSuggestionStore';
 import FollowUsersSuggestionAction from 'app/action/FollowUsersSuggestionAction';
@@ -7,7 +8,10 @@ import {listUsersSince} from 'app/api';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { users: [] };
+    this.state = {
+      users: [],
+      error: null
+    };
 
     this.onRefreshSuggestion = this.onRefreshSuggestion.bind(this);
     this.onRefreshSuggestionError = this.onRefreshSuggestionError.bind(this);
@@ -26,11 +30,14 @@ class App extends React.Component {
   }
 
   onRefreshSuggestion(data) {
-    this.setState({ users: data.users });
+    this.setState({
+      users: data.users,
+      error: null
+    });
   }
 
   onRefreshSuggestionError(error) {
-    console.log(error);
+    this.setState({ error: error });
   }
 
   refreshSuggestion() {
@@ -44,6 +51,7 @@ class App extends React.Component {
             <h2>Who to follow on GitHub</h2>
             <button onClick={this.refreshSuggestion}>Refresh</button>
         </div>
+        { this.state.error ? <Error error={this.state.error} /> : null }
         <FollowUsersSuggestion users={this.state.users} />
       </div>
     )
