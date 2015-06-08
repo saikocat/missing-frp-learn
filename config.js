@@ -14,6 +14,7 @@ System.config({
     "fetch": "github:github/fetch@0.9.0",
     "jsx": "github:floatdrop/plugin-jsx@1.1.0",
     "kefir": "npm:kefir@2.6.0",
+    "keymirror": "npm:keymirror@0.1.1",
     "react": "npm:react@0.13.3",
     "traceur": "github:jmcriffey/bower-traceur@0.0.88",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88",
