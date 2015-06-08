@@ -13,6 +13,7 @@ System.config({
   "map": {
     "fetch": "github:github/fetch@0.9.0",
     "jsx": "github:floatdrop/plugin-jsx@1.1.0",
+    "kefir": "npm:kefir@2.6.0",
     "react": "npm:react@0.13.3",
     "traceur": "github:jmcriffey/bower-traceur@0.0.88",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.88",
@@ -263,6 +264,10 @@ System.config({
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "process": "github:jspm/nodelibs-process@0.1.1",
       "source-map": "npm:source-map@0.1.31"
+    },
+    "npm:kefir@2.6.0": {
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     },
     "npm:miller-rabin@2.0.1": {
       "bn.js": "npm:bn.js@2.0.5",
